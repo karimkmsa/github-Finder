@@ -17,8 +17,6 @@ export default function RepoCard({ repo }) {
     return () => controller.abort()
   }, [repo.owner.login, repo.name])
 
-  // If the languages call failed (e.g. rate limit), fall back to the
-  // repo's primary language so the card still shows something useful.
   const shown =
     languages && languages.length > 0
       ? languages
